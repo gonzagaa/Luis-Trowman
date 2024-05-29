@@ -1,0 +1,181 @@
+#home {
+  background: var(--gradient-black);
+  height: 100vh;
+  overflow: hidden;
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  transition: all 200ms ease-in-out;
+
+  cursor: url("../assets/cursor\ white.svg"), auto;
+}
+
+#home .content .principal {
+  margin-bottom: 30rem;
+}
+
+#home h1 {
+  color: var(--color-text);
+  font-size: 4.5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+  
+#home h1.line {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-text);
+    text-stroke: 1px #d8d8d8;
+    z-index: 3;
+}
+
+#home img.astronauta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 2;
+
+  animation: astronauta 30s linear infinite;
+
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 50%, transparent 100%);
+}
+
+#home .descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+  padding-left: 1rem;
+}
+
+#home .descricao p {
+  font-family: var(--interV);
+  color: var(--color-text);
+  font-size: 1.6rem;
+  position: relative;
+  letter-spacing: .2rem;
+}
+
+#home .descricao p::before {
+  content: '';
+  position: absolute;
+  background: var(--color-text);
+  height: 100%;
+  width: 1px;
+  left: -1rem;
+}
+
+#home .autor {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 21;
+}
+
+#home::before {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(to bottom, #00000000, #00000060 100%);
+  z-index: 20;
+}
+
+#home .autor p {
+  font-family: var(--interV);
+  color: var(--color-text);
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+}
+
+@keyframes astronauta {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    transform: scale(1.1) translate(-50%, -55%);
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+#home .blush {
+    width: 1500px;
+    height: 1500px;
+    background: radial-gradient(#ffffff, transparent 50%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    top: -80rem;
+    left: 20%;
+    opacity: .3;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+      width: min(76rem, 100%);
+  } 
+}
+
+@media (min-width: 1080px) {
+    .wrapper {
+      width: min(112rem, 100%);
+    }
+
+    header#home .content .principal {
+      margin-bottom: 20rem;
+    }
+
+    header#home h1 {
+      font-size: 7rem;
+    }
+
+    header#home img.astronauta {
+      width: 30%;
+    }
+
+    header#home .descricao {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header#home .descricao p {
+      font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+  .wrapper {
+    width: min(140rem, 100%);
+  }
+
+  header#home h1 {
+    font-size: 10rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .wrapper {
+    width: min(150rem, 100%);
+  }
+}
+
+@media (min-width: 2000px) {
+  header#home .circle {
+    top: 1080px;
+  }
+}

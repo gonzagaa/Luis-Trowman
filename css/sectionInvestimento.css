@@ -1,0 +1,129 @@
+#investimento {
+    background: var(--gradient-black);
+    padding-block: 8rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    cursor: url("../assets/cursor\ white.svg"), auto;
+}
+
+#investimento .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#investimento header h2 {
+    color: var(--color-text);
+    font-size: 3.2rem;
+    margin-bottom: 5rem;
+    text-align: left;
+}
+
+#investimento .topics {
+    font-family: var(--interV);
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+    gap: 4rem;
+}
+
+#investimento .topics .topic {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: relative;
+}
+
+#investimento .topics .topic::before {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    background: linear-gradient(to right, #ffffff58, #00000000 100%);
+    width: 100vw;
+    height: 1px;
+}
+
+#investimento .topics .topic p {
+    font-size: 1.6rem;
+    color: var(--color-text);
+}
+
+#investimento .topics .topic p > span {
+    font-size: 1.6rem;
+    opacity: .5;
+    font-weight: 300;
+}
+
+#investimento .topics .topic p.total {
+    font-weight: 700;
+}
+
+#investimento .topics .topic span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-text);
+    opacity: .5;
+}
+
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: min(76rem, 100%);
+    } 
+}
+  
+@media (min-width: 1080px) {
+    .wrapper {
+     width: min(112rem, 100%);
+    }
+
+    section#investimento header h2 {
+        font-size: 7.5rem;
+    }
+
+    section#investimento .topics .topic {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section#investimento .topics {
+        gap: 6rem;
+    }
+
+    section#investimento .topics .topic p {
+        font-size: 2rem;
+    }
+
+    section#investimento .topics .topic span {
+        font-size: 2rem;
+    }
+
+    section#investimento .topics .topic::before {
+        right: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to right, #00000000, #ffffff58, #00000000);
+        bottom: -3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .wrapper {
+      width: min(140rem, 100%);
+    }
+  }
+  
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+  }
+  
+  

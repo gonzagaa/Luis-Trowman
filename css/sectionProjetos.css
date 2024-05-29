@@ -1,0 +1,246 @@
+#projetos .projeto,
+#projetos .header {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    overflow: hidden;
+}
+
+#projetos .header {
+    background: var(gradient-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#projetos .header img.pattern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .1;
+  filter: brightness(0) invert(100%);
+  width: 100%;
+}
+
+#projetos .header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #00000000, #000, #00000000);
+}
+
+#projetos .header h2 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+#projetos .header p {
+    color: var(--color-text);
+    font-family: var(--interV);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+#projetos .header ion-icon {
+  margin-top: 2rem;
+  font-size: 4rem;
+  color: var(--color-text);
+  animation: arrow infinite ease-in-out 3s;
+}
+
+@keyframes arrow {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#projetos .projeto:nth-child(2) {
+  box-shadow: 0 -70px 40px #00000018;
+}
+
+#projetos .projeto {
+    background: var(--black-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0 -70px 40px #0000007d;
+}
+
+#projetos .projeto .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#projetos .projeto .text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+}
+
+#projetos .projeto .text h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+#projetos .projeto .text p {
+    font-family: var(--interV);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #8b8b8b;
+}
+
+#projetos .projeto .text a button {
+  font-family: var(--interV);
+  background: transparent;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  margin-top: 2rem;
+  
+  transition: all 200ms ease-in-out;
+}
+
+#projetos .projeto .text a button:hover {
+  filter: brightness(1.2);
+}
+
+#projetos .projeto .image {
+    display: flex;
+    justify-content: start;
+    position: relative;
+}
+
+#projetos .projeto .image img.desktop {
+    width: 80%;
+    border-radius: 1rem;
+    aspect-ratio: 13/16;
+    object-fit: cover;
+}
+
+#projetos .projeto .image img.mobile {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  bottom: 10%;
+  border-radius: 1rem;
+  box-shadow:  4px 4px 15px #11111169,
+             -4px -4px 15px #1717177d;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: min(76rem, 100%);
+    } 
+}
+  
+  @media (min-width: 1080px) {
+      .wrapper {
+        width: min(112rem, 100%);
+    }
+
+    section#projetos .header .wrapper h2 {
+        font-size: 7.5rem;
+    }
+
+    section#projetos .header p {
+        font-size: 2rem;
+    }
+
+    section#projetos .projeto .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+    section#projetos .header img.pattern {
+      width: initial;
+    }
+
+    section#projetos .projeto .content .text h2 {
+        font-size: 8rem;
+      }
+
+    section#projetos .projeto .content .text h3 {
+        font-size: 3rem;
+      }
+
+    section#projetos .projeto .content .text p {
+        font-size: 2rem;
+        line-height: 1.8;
+      }
+
+    section#projetos .projeto .image {
+        display: flex;
+        justify-content: end;
+
+        position: relative;
+    }
+
+    section#projetos .projeto .image img.desktop {
+      height: 90vh;
+      aspect-ratio: 16/19;
+      width: 100%;
+      border-radius: 0;
+
+      transition: all 200ms ease-in-out;
+    }
+
+    section#projetos .projeto .image img.desktop:hover {
+      filter: brightness(1);
+    }
+}
+
+@media (min-width: 1400px) {
+    .wrapper {
+      width: min(140rem, 100%);
+    }
+
+    section#projetos .projeto .image img.desktop {
+      height: 100vh;
+      aspect-ratio: 16/21;
+      width: 100%;
+      border-radius: 0;
+      filter: brightness(.7);
+    }
+
+    #projetos .projeto .image img.mobile {
+      position: absolute;
+      width: 35%;
+      bottom: 10%;
+      box-shadow:  8px 8px 15px #11111100,
+      -10px -10px 45px #171717d3;
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+  }
+  
+  @media (min-width: 2000px) {
+    header#home .circle {
+      top: 1080px;
+    }
+  }

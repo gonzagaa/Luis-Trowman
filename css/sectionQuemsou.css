@@ -1,0 +1,151 @@
+#quemsou {
+    background: var(--color-text);
+    overflow: hidden;
+    padding-block: 8rem;
+  min-height: 100vh;
+    cursor: url("../assets/cursor\ black.svg"), auto;
+}
+
+#quemsou .content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "A" "B";
+    gap: 5rem;
+}
+
+#quemsou .text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+
+    grid-area: B;
+}
+
+#quemsou .text h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+#quemsou .text h3 {
+    font-size: 1.8rem;
+    font-family: var(--interV);
+    margin-bottom: 1rem;
+}
+
+#quemsou .text p {
+    font-family: var(--interV);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+#quemsou .text .redes-sociais {
+    position: relative;
+    z-index: 10;
+    margin-top: 2rem;
+}
+
+#quemsou .text .redes-sociais p {
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+#quemsou .text .redes-sociais ion-icon {
+    font-size: 3rem;
+    color: var(--black-color);
+    margin-right: .5rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#quemsou .text .redes-sociais ion-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+#quemsou .image {
+    display: flex;
+    justify-content: start;
+}
+
+#quemsou .image img {
+    width: 100%;
+    border-radius: 2rem;
+    aspect-ratio: 13/16;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: min(76rem, 100%);
+    } 
+  }
+  
+  @media (min-width: 1080px) {
+      .wrapper {
+        width: min(112rem, 100%);
+      }
+  
+      section#quemsou .content {
+        grid-template-rows: initial;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-template-areas: initial;
+      }
+
+      section#quemsou .content .text {
+        grid-area: initial;
+      }
+
+      section#quemsou .content .text h2 {
+        font-size: 8rem;
+      }
+
+      section#quemsou .content .text h3 {
+        font-size: 3rem;
+      }
+
+      section#quemsou .content .text p {
+        font-size: 2rem;
+      }
+
+      section#quemsou .content .text .redes-sociais p {
+        font-size: 2.5rem;
+      }
+
+      section#quemsou .content .text .redes-sociais ion-icon {
+        font-size: 4rem;
+      }
+
+      section#quemsou .image {
+        display: flex;
+        justify-content: end;
+    }
+
+      section#quemsou .image img {
+        width: 80%;
+        border-radius: 1rem;
+        aspect-ratio: 13/16;
+        object-fit: cover;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .wrapper {
+      width: min(140rem, 100%);
+    }
+  }
+  
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+  }
+  
+  @media (min-width: 2000px) {
+    header#home .circle {
+      top: 1080px;
+    }
+  }
